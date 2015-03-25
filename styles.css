@@ -1,0 +1,148 @@
+.stopwatch {
+  text-align: center;
+}
+.clock {
+  width: 300px;
+  height: 300px;
+  margin: 60px auto 0;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  position: relative;
+}
+em, b, i {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;  
+}
+em:after, b:after, i:after {
+  position: absolute;
+  top: -1px;
+  left: 49.5%;
+  content: "";
+  width: 2px;
+  height: 6px;
+  z-index: 1;
+  background: #000000;
+}
+i {
+  transform: rotate(6deg);
+}
+i:after {
+  width: 1px;
+  height: 5px;
+}
+em>em {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+b {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.clock:after, .clock:before {
+  background: #000000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 5%;
+  height: 5%;
+  z-index: 1;
+}
+.clock:before {
+  width: 1%;
+  height: 1%;
+  z-index: 5;
+}
+.minutes-container, .seconds-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}  
+.minutes {
+  background: #000000;
+  height: 30%;
+  left: 49%;
+  position: absolute;
+  top: 20%;
+  transform-origin: 50% 100%;
+  width: 2%;
+}
+.seconds {
+  background: #800000;
+  height: 55%;
+  left: 49.5%;
+  position: absolute;
+  top: 4%;
+  -webkit-transform-origin: 50% 80%;
+  -moz-transform-origin: 50% 80%;
+  -o-transform-origin: 50% 80%;
+  -ms-transform-origin: 50% 80%;
+  transform-origin: 50% 80%;
+  width: 1%;
+  z-index: 2;
+}
+.go-min {
+  animation: rotate 3600s infinite linear;
+  -webkit-animation: rotate 3600s infinite linear;
+  -moz-animation: rotate 3600s infinite linear;
+  -o-animation: rotate 3600s infinite linear;
+  -ms-animation: rotate 3600s infinite linear;
+}
+.pause {
+  animation-play-state: paused !important;
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important;
+  -ms-animation-play-state: paused !important;
+}
+.go-sec {
+  animation: rotate 60s infinite linear;
+  -webkit-animation: rotate 60s infinite linear;
+  -moz-animation: rotate 60s infinite linear;
+  -o-animation: rotate 60s infinite linear;
+  -ms-animation: rotate 60s infinite linear;
+}
+@keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+@-webkit-keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+@-moz-keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+@-o-keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+@-ms-keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+.buttons {
+  display: inline-block;
+  margin-top: 50px;
+  margin-right: -40px;
+}
+.buttons button {
+  font-size: 30px;
+  margin-right: 40px;
+}
