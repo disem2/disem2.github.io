@@ -1,5 +1,7 @@
-<img src="images/1.jpg" />
-<div>
-  <span>&pound; <em class="price">20945</em></span>
-  <span class="street">Somewhere</span><span class="town">nowhere</span>
-</div>
+<div class="result" ng-repeat="item in list">
+  <img src="images/1.jpg" />
+  <div class="content">
+    <span class="price">&pound;<em class="cost">{{item.price}}</em></span>
+    <span class="street">{{item.street}}</span><span class="town">{{item.town}}</span>
+  </div>
+</div> 
