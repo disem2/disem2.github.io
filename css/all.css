@@ -1,0 +1,91 @@
+body {
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+}
+div {
+  overflow: hidden;
+}
+a:hover {
+  text-decoration: none;
+}
+.result {
+  display: block;
+  width: 95%; 
+  border: 2px solid #000000;
+  margin: 10px auto 0;
+  overflow: hidden;
+  padding: 3px;
+  color: #000000;
+  text-decoration: none;
+}
+h2 {
+  text-align: center;
+}
+.res-img {
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #000000;
+}
+.res-content {
+  width: 72%;
+  font-size: 20px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1%;
+}
+.price {
+  display: inline-block;
+  width: 100%;
+}
+.details-head {
+  overflow: hidden; 
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+}
+.details-head h1 {
+  font-size: 28px;
+  position: absolute;
+  height: 40px;
+  margin: 0;
+  left: 30%;
+  line-height: 40px;
+}
+.details-head .backbutton {
+  float: left;
+  font-size: 30px;
+  margin-left: 20px;
+}
+.details-head .add-property {
+  float: right;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.det-price, .det-title {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+.det-img {
+  width: 100%;
+  border: 1px solid #000000;
+  margin: 10px auto;
+  display: block;
+}
+.det-summary {
+  margin-top: 10px;
+}
+/*320px - 600px devises*/
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .res-content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .details-head h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="search-wrapper">
+  <h2 class="result-head"><em id="quantity">{{list.length}}</em> of <em id="res-of">207</em> matches</h2>
+  <a class="result" ng-repeat="item in list" ng-href="#/show/{{$index}}">
+    <div>
+      <img src="{{item.thumb_url}}" class="res-img" />
+      <div class="res-content">
+        <span class="price"><em class="cost">{{item.price_formatted}}</em></span>
+        <span class="title">{{item.title}}</span>
+      </div>
+    </div>
+  </a>
+</div>
